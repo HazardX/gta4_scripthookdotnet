@@ -6,7 +6,7 @@ based on and includes parts of the GTAIV C++ Script Hook
 from Aru <oneforaru at gmail dot com>
 
 Classes Vector2, Vector3, Vector4, Quaternion and Matrix based on
-sourcecode from SlimDX ( www.slimdx.org )
+sourcecode from SlimDX (https://github.com/SlimDX/slimdx)
 
 
 **Description**
