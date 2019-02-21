@@ -35,6 +35,24 @@ You can get Aru's C++ Script Hook here:
 http://www.gtaforums.com/index.php?showtopic=390582
 
 
+**Requirements**
+
+Required to compile the sourcecode are:
+
+- Microsoft Visual Studio 2010 (newer versions will probably work too)
+- Microsoft DirectX SDK March 2008
+- Microsoft Windows SDK (maybe? am not entirely sure...)
+
+IMPORTANT: After installing the DirectX SDK March 2008 you'll have to
+set up a system variable in windows named "DXSDK_2008-03" containing 
+the full path to the installation folder of the SDK. This is to allow 
+multiple versions of the SDK to be installed. Make sure to include a 
+final backslash ( \ ) at the end of the path.
+
+See the included ScriptHookDotNet.readme.txt on how to actually run 
+the Script Hook with the game.
+
+
 **License**
 
 The GTAIV .Net Script Hook sourcecode is published unter the MIT license. 
@@ -54,21 +72,3 @@ as author of the original GTAIV .Net Script Hook.
 
 See LICENSE-ScriptHook.txt for the license of the GTAIV C++ Script Hook,
 and LICENSE-SlimDX.txt for the license of the SlimDX sourcecode.
-
-
-**Requirements**
-
-Required to compile the sourcecode are:
-
-- Microsoft Visual Studio 2010 (newer versions will probably work too)
-- Microsoft DirectX SDK March 2008
-- Microsoft Windows SDK (maybe? am not entirely sure...)
-
-IMPORTANT: After installing the DirectX SDK March 2008 you'll have to
-set up a system variable in windows named "DXSDK_2008-03" containing 
-the full path to the installation folder of the SDK. This is to allow 
-multiple versions of the SDK to be installed. Make sure to include a 
-final backslash ( \ ) at the end of the path.
-
-See the included ScriptHookDotNet.readme.txt on how to actually run 
-the Script Hook with the game.
