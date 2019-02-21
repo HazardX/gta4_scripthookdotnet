@@ -1,0 +1,793 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Objects">
+      <UniqueIdentifier>{5bf92567-0a5f-4c74-8a5b-41656f258792}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\WorldObjects">
+      <UniqueIdentifier>{59fb1365-a6e9-402b-a2bf-3fa67bce7b00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\ScriptingObjects">
+      <UniqueIdentifier>{7b4e437f-8ad8-4602-a3bb-456a06ec6232}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\ScriptingObjects\abstract">
+      <UniqueIdentifier>{1c70fc21-0ce7-41b1-b2cf-4f514a0df2fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\ScriptingObjects\helper">
+      <UniqueIdentifier>{5425edaf-6ff5-4e72-b397-40549667c3d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\ScriptingObjects\general">
+      <UniqueIdentifier>{c1d95ad9-ef98-423e-956d-8b6794c1c4c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\ScriptingObjects\euphoria">
+      <UniqueIdentifier>{02f1c3e6-cc0c-4f60-a767-a08e4effc22f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\ScriptingObjects\structs">
+      <UniqueIdentifier>{8c4bc0c5-4e1e-4444-9cc5-682160dde932}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\ScriptingObjects\forms">
+      <UniqueIdentifier>{53385131-06a0-4580-9974-fcfb67a203ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\LocalObjects">
+      <UniqueIdentifier>{10846d87-3034-4a2d-80ea-0b02473b65c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\LocalObjects\helper">
+      <UniqueIdentifier>{751a2bcb-35c9-44c6-9c08-7b0ad2945206}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\LocalObjects\helper\design">
+      <UniqueIdentifier>{af41191a-5a8e-484f-a21b-5292158ef2c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\LocalObjects\threading">
+      <UniqueIdentifier>{4b746ada-e6d5-42f6-a13c-4d862298deed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\LocalObjects\_unmanaged">
+      <UniqueIdentifier>{6bd7747a-6340-488c-8847-0c1c4abfa119}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\LocalObjects\general">
+      <UniqueIdentifier>{40944675-6a43-4b9d-a6dd-de016064a513}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\LocalObjects\nativecall">
+      <UniqueIdentifier>{4c6e1445-0476-42ba-ab68-c59d556c7836}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\RemoteObjects">
+      <UniqueIdentifier>{bd73ee24-375a-4301-8709-7b5d4434a70b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\RemoteObjects\general">
+      <UniqueIdentifier>{4f365d66-f093-4aeb-a12d-976258ae461c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\RemoteObjects\threading">
+      <UniqueIdentifier>{b7e02040-23d5-44e0-b911-58ceac7b9a02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\Direct3D">
+      <UniqueIdentifier>{5f0507a3-71e7-47ac-846b-df2720135b81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ScriptHookHeaders">
+      <UniqueIdentifier>{d305109c-0dc0-4a0e-9699-e45d70ad439e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ScriptHookHeaders\Services">
+      <UniqueIdentifier>{957594fb-02b8-41f2-b44e-9e176bef9417}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\_includes">
+      <UniqueIdentifier>{dfab8dfd-bb6a-45a7-aa72-a3e99dc8852c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Blip.cpp">
+      <Filter>Objects\WorldObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Objects\WorldObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Checkpoint.cpp">
+      <Filter>Objects\WorldObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>Objects\WorldObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Objects\WorldObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Ped.cpp">
+      <Filter>Objects\WorldObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Pickup.cpp">
+      <Filter>Objects\WorldObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptedFire.cpp">
+      <Filter>Objects\WorldObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Vehicle.cpp">
+      <Filter>Objects\WorldObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="bHandleObject.cpp">
+      <Filter>Objects\ScriptingObjects\abstract</Filter>
+    </ClCompile>
+    <ClCompile Include="bMouse.cpp">
+      <Filter>Objects\ScriptingObjects\abstract</Filter>
+    </ClCompile>
+    <ClCompile Include="bScriptChild.cpp">
+      <Filter>Objects\ScriptingObjects\abstract</Filter>
+    </ClCompile>
+    <ClCompile Include="PedCollection.cpp">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingsFile.cpp">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinTemplate.cpp">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="vEuphoria.cpp">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="vGlobals.cpp">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="vHelper.cpp">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="vPedAnimation.cpp">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="vPedComponent.cpp">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="vPedSkin.cpp">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="vResources.cpp">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="vTasks.cpp">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="vVehicleDoor.cpp">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="vVehicleExtra.cpp">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="vWeapon.cpp">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="vWeaponCollection.cpp">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationSet.cpp">
+      <Filter>Objects\ScriptingObjects\general</Filter>
+    </ClCompile>
+    <ClCompile Include="DecisionMaker.cpp">
+      <Filter>Objects\ScriptingObjects\general</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Objects\ScriptingObjects\general</Filter>
+    </ClCompile>
+    <ClCompile Include="Garage.cpp">
+      <Filter>Objects\ScriptingObjects\general</Filter>
+    </ClCompile>
+    <ClCompile Include="Group.cpp">
+      <Filter>Objects\ScriptingObjects\general</Filter>
+    </ClCompile>
+    <ClCompile Include="mHost.cpp">
+      <Filter>Objects\ScriptingObjects\general</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Objects\ScriptingObjects\general</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskSequence.cpp">
+      <Filter>Objects\ScriptingObjects\general</Filter>
+    </ClCompile>
+    <ClCompile Include="Team.cpp">
+      <Filter>Objects\ScriptingObjects\general</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>Objects\ScriptingObjects\general</Filter>
+    </ClCompile>
+    <ClCompile Include="NmMessage.cpp">
+      <Filter>Objects\ScriptingObjects\euphoria</Filter>
+    </ClCompile>
+    <ClCompile Include="sColorIndex.cpp">
+      <Filter>Objects\ScriptingObjects\structs</Filter>
+    </ClCompile>
+    <ClCompile Include="sMatrix.cpp">
+      <Filter>Objects\ScriptingObjects\structs</Filter>
+    </ClCompile>
+    <ClCompile Include="sModel.cpp">
+      <Filter>Objects\ScriptingObjects\structs</Filter>
+    </ClCompile>
+    <ClCompile Include="sQuaternion.cpp">
+      <Filter>Objects\ScriptingObjects\structs</Filter>
+    </ClCompile>
+    <ClCompile Include="sRoom.cpp">
+      <Filter>Objects\ScriptingObjects\structs</Filter>
+    </ClCompile>
+    <ClCompile Include="sVector2.cpp">
+      <Filter>Objects\ScriptingObjects\structs</Filter>
+    </ClCompile>
+    <ClCompile Include="sVector3.cpp">
+      <Filter>Objects\ScriptingObjects\structs</Filter>
+    </ClCompile>
+    <ClCompile Include="sVector4.cpp">
+      <Filter>Objects\ScriptingObjects\structs</Filter>
+    </ClCompile>
+    <ClCompile Include="fButton.cpp">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClCompile>
+    <ClCompile Include="fCheckbox.cpp">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClCompile>
+    <ClCompile Include="fColorDialog.cpp">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClCompile>
+    <ClCompile Include="fConfigForm.cpp">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClCompile>
+    <ClCompile Include="fControl.cpp">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClCompile>
+    <ClCompile Include="fForm.cpp">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClCompile>
+    <ClCompile Include="fFormHost.cpp">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClCompile>
+    <ClCompile Include="fImagebox.cpp">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClCompile>
+    <ClCompile Include="fKeybox.cpp">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClCompile>
+    <ClCompile Include="fLabel.cpp">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClCompile>
+    <ClCompile Include="fListbox.cpp">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClCompile>
+    <ClCompile Include="fMouse.cpp">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClCompile>
+    <ClCompile Include="fScrollbar.cpp">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClCompile>
+    <ClCompile Include="fTextbox.cpp">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyWatchDog.cpp">
+      <Filter>Objects\LocalObjects\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="dColorConverter.cpp">
+      <Filter>Objects\LocalObjects\helper\design</Filter>
+    </ClCompile>
+    <ClCompile Include="dControlDesigner.cpp">
+      <Filter>Objects\LocalObjects\helper\design</Filter>
+    </ClCompile>
+    <ClCompile Include="dFormRootDesigner.cpp">
+      <Filter>Objects\LocalObjects\helper\design</Filter>
+    </ClCompile>
+    <ClCompile Include="StartupThreadC.cpp">
+      <Filter>Objects\LocalObjects\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="cppHook.cpp">
+      <Filter>Objects\LocalObjects\_unmanaged</Filter>
+    </ClCompile>
+    <ClCompile Include="EventArgs.cpp">
+      <Filter>Objects\LocalObjects\_unmanaged</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Objects\LocalObjects\_unmanaged</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryAccess.cpp">
+      <Filter>Objects\LocalObjects\_unmanaged</Filter>
+    </ClCompile>
+    <ClCompile Include="Console.cpp">
+      <Filter>Objects\LocalObjects\general</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleCommands.cpp">
+      <Filter>Objects\LocalObjects\general</Filter>
+    </ClCompile>
+    <ClCompile Include="NetHook.cpp">
+      <Filter>Objects\LocalObjects\general</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptDomain.cpp">
+      <Filter>Objects\LocalObjects\general</Filter>
+    </ClCompile>
+    <ClCompile Include="NativeContext2.cpp">
+      <Filter>Objects\LocalObjects\nativecall</Filter>
+    </ClCompile>
+    <ClCompile Include="NativeContext3.cpp">
+      <Filter>Objects\LocalObjects\nativecall</Filter>
+    </ClCompile>
+    <ClCompile Include="nFunction.cpp">
+      <Filter>Objects\LocalObjects\nativecall</Filter>
+    </ClCompile>
+    <ClCompile Include="nParameter.cpp">
+      <Filter>Objects\LocalObjects\nativecall</Filter>
+    </ClCompile>
+    <ClCompile Include="nTemplate.cpp">
+      <Filter>Objects\LocalObjects\nativecall</Filter>
+    </ClCompile>
+    <ClCompile Include="ContentCache.cpp">
+      <Filter>Objects\RemoteObjects\general</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoteProcessing.cpp">
+      <Filter>Objects\RemoteObjects\general</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoteScriptDomain.cpp">
+      <Filter>Objects\RemoteObjects\general</Filter>
+    </ClCompile>
+    <ClCompile Include="Script.cpp">
+      <Filter>Objects\RemoteObjects\general</Filter>
+    </ClCompile>
+    <ClCompile Include="GenericThread.cpp">
+      <Filter>Objects\RemoteObjects\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="NetThread.cpp">
+      <Filter>Objects\RemoteObjects\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptThread.cpp">
+      <Filter>Objects\RemoteObjects\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D_Device.cpp">
+      <Filter>Objects\Direct3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Objects\Direct3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics.cpp">
+      <Filter>Objects\Direct3D</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageInformation.cpp">
+      <Filter>Objects\Direct3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Objects\Direct3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewport.cpp">
+      <Filter>Objects\Direct3D</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryStream.cpp">
+      <Filter>Objects\LocalObjects\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="vDynamicMetadata.cpp">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="bObject.cpp">
+      <Filter>Objects\ScriptingObjects\abstract</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Blip.h">
+      <Filter>Objects\WorldObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Objects\WorldObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Checkpoint.h">
+      <Filter>Objects\WorldObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>Objects\WorldObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Objects\WorldObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Ped.h">
+      <Filter>Objects\WorldObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Pickup.h">
+      <Filter>Objects\WorldObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptedFire.h">
+      <Filter>Objects\WorldObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Vehicle.h">
+      <Filter>Objects\WorldObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="bCollection.h">
+      <Filter>Objects\ScriptingObjects\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="bConsole.h">
+      <Filter>Objects\ScriptingObjects\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="bHandleObject.h">
+      <Filter>Objects\ScriptingObjects\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="bMouse.h">
+      <Filter>Objects\ScriptingObjects\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="bObject.h">
+      <Filter>Objects\ScriptingObjects\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="bScriptChild.h">
+      <Filter>Objects\ScriptingObjects\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="interfaces.h">
+      <Filter>Objects\ScriptingObjects\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="PedCollection.h">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingsFile.h">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinTemplate.h">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="vEuphoria.h">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="vGlobals.h">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="vHelper.h">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="vPedAnimation.h">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="vPedComponent.h">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="vPedSkin.h">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="vResources.h">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="vTasks.h">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="vVehicleDoor.h">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="vVehicleExtra.h">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="vWeapon.h">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="vWeaponCollection.h">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationSet.h">
+      <Filter>Objects\ScriptingObjects\general</Filter>
+    </ClInclude>
+    <ClInclude Include="DecisionMaker.h">
+      <Filter>Objects\ScriptingObjects\general</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Objects\ScriptingObjects\general</Filter>
+    </ClInclude>
+    <ClInclude Include="Garage.h">
+      <Filter>Objects\ScriptingObjects\general</Filter>
+    </ClInclude>
+    <ClInclude Include="Group.h">
+      <Filter>Objects\ScriptingObjects\general</Filter>
+    </ClInclude>
+    <ClInclude Include="mHost.h">
+      <Filter>Objects\ScriptingObjects\general</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Objects\ScriptingObjects\general</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskSequence.h">
+      <Filter>Objects\ScriptingObjects\general</Filter>
+    </ClInclude>
+    <ClInclude Include="Team.h">
+      <Filter>Objects\ScriptingObjects\general</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>Objects\ScriptingObjects\general</Filter>
+    </ClInclude>
+    <ClInclude Include="NmArmsWindmillHelper.h">
+      <Filter>Objects\ScriptingObjects\euphoria</Filter>
+    </ClInclude>
+    <ClInclude Include="NmBeingShotHelper.h">
+      <Filter>Objects\ScriptingObjects\euphoria</Filter>
+    </ClInclude>
+    <ClInclude Include="NmBodyBalanceHelper.h">
+      <Filter>Objects\ScriptingObjects\euphoria</Filter>
+    </ClInclude>
+    <ClInclude Include="NmCommands.h">
+      <Filter>Objects\ScriptingObjects\euphoria</Filter>
+    </ClInclude>
+    <ClInclude Include="NmCustom.h">
+      <Filter>Objects\ScriptingObjects\euphoria</Filter>
+    </ClInclude>
+    <ClInclude Include="NmEnums.h">
+      <Filter>Objects\ScriptingObjects\euphoria</Filter>
+    </ClInclude>
+    <ClInclude Include="NmGrabHelper.h">
+      <Filter>Objects\ScriptingObjects\euphoria</Filter>
+    </ClInclude>
+    <ClInclude Include="NmLeanToPositionHelper.h">
+      <Filter>Objects\ScriptingObjects\euphoria</Filter>
+    </ClInclude>
+    <ClInclude Include="NmLeanTowardsObjectHelper.h">
+      <Filter>Objects\ScriptingObjects\euphoria</Filter>
+    </ClInclude>
+    <ClInclude Include="NmMessage.h">
+      <Filter>Objects\ScriptingObjects\euphoria</Filter>
+    </ClInclude>
+    <ClInclude Include="NmPedalLegsHelper.h">
+      <Filter>Objects\ScriptingObjects\euphoria</Filter>
+    </ClInclude>
+    <ClInclude Include="sColorIndex.h">
+      <Filter>Objects\ScriptingObjects\structs</Filter>
+    </ClInclude>
+    <ClInclude Include="sFoundScript.h">
+      <Filter>Objects\ScriptingObjects\structs</Filter>
+    </ClInclude>
+    <ClInclude Include="sMatrix.h">
+      <Filter>Objects\ScriptingObjects\structs</Filter>
+    </ClInclude>
+    <ClInclude Include="sModel.h">
+      <Filter>Objects\ScriptingObjects\structs</Filter>
+    </ClInclude>
+    <ClInclude Include="sQuaternion.h">
+      <Filter>Objects\ScriptingObjects\structs</Filter>
+    </ClInclude>
+    <ClInclude Include="sRoom.h">
+      <Filter>Objects\ScriptingObjects\structs</Filter>
+    </ClInclude>
+    <ClInclude Include="sVector2.h">
+      <Filter>Objects\ScriptingObjects\structs</Filter>
+    </ClInclude>
+    <ClInclude Include="sVector3.h">
+      <Filter>Objects\ScriptingObjects\structs</Filter>
+    </ClInclude>
+    <ClInclude Include="sVector4.h">
+      <Filter>Objects\ScriptingObjects\structs</Filter>
+    </ClInclude>
+    <ClInclude Include="fButton.h">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClInclude>
+    <ClInclude Include="fCheckbox.h">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClInclude>
+    <ClInclude Include="fColorDialog.h">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClInclude>
+    <ClInclude Include="fConfigForm.h">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClInclude>
+    <ClInclude Include="fControl.h">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClInclude>
+    <ClInclude Include="fForm.h">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClInclude>
+    <ClInclude Include="fFormHost.h">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClInclude>
+    <ClInclude Include="fImagebox.h">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClInclude>
+    <ClInclude Include="fKeybox.h">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClInclude>
+    <ClInclude Include="fLabel.h">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClInclude>
+    <ClInclude Include="fListbox.h">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClInclude>
+    <ClInclude Include="fMouse.h">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClInclude>
+    <ClInclude Include="fScrollbar.h">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClInclude>
+    <ClInclude Include="fTextbox.h">
+      <Filter>Objects\ScriptingObjects\forms</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyboardLayout.h">
+      <Filter>Objects\LocalObjects\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyWatchDog.h">
+      <Filter>Objects\LocalObjects\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="dColorConverter.h">
+      <Filter>Objects\LocalObjects\helper\design</Filter>
+    </ClInclude>
+    <ClInclude Include="dControlDesigner.h">
+      <Filter>Objects\LocalObjects\helper\design</Filter>
+    </ClInclude>
+    <ClInclude Include="dEventArgs.h">
+      <Filter>Objects\LocalObjects\helper\design</Filter>
+    </ClInclude>
+    <ClInclude Include="dFormRootDesigner.h">
+      <Filter>Objects\LocalObjects\helper\design</Filter>
+    </ClInclude>
+    <ClInclude Include="StartupThreadC.h">
+      <Filter>Objects\LocalObjects\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="cppHook.h">
+      <Filter>Objects\LocalObjects\_unmanaged</Filter>
+    </ClInclude>
+    <ClInclude Include="enums.h">
+      <Filter>Objects\LocalObjects\_unmanaged</Filter>
+    </ClInclude>
+    <ClInclude Include="EventArgs.h">
+      <Filter>Objects\LocalObjects\_unmanaged</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryAccess.h">
+      <Filter>Objects\LocalObjects\_unmanaged</Filter>
+    </ClInclude>
+    <ClInclude Include="NativeHashes.h">
+      <Filter>Objects\LocalObjects\_unmanaged</Filter>
+    </ClInclude>
+    <ClInclude Include="nScripting.h">
+      <Filter>Objects\LocalObjects\_unmanaged</Filter>
+    </ClInclude>
+    <ClInclude Include="nScriptingOrig.h">
+      <Filter>Objects\LocalObjects\_unmanaged</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripting.h">
+      <Filter>Objects\LocalObjects\_unmanaged</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptingDirty.h">
+      <Filter>Objects\LocalObjects\_unmanaged</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptingOrig.h">
+      <Filter>Objects\LocalObjects\_unmanaged</Filter>
+    </ClInclude>
+    <ClInclude Include="Console.h">
+      <Filter>Objects\LocalObjects\general</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleCommands.h">
+      <Filter>Objects\LocalObjects\general</Filter>
+    </ClInclude>
+    <ClInclude Include="NetHook.h">
+      <Filter>Objects\LocalObjects\general</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptDomain.h">
+      <Filter>Objects\LocalObjects\general</Filter>
+    </ClInclude>
+    <ClInclude Include="NativeContext2.h">
+      <Filter>Objects\LocalObjects\nativecall</Filter>
+    </ClInclude>
+    <ClInclude Include="NativeContext3.h">
+      <Filter>Objects\LocalObjects\nativecall</Filter>
+    </ClInclude>
+    <ClInclude Include="nFunction.h">
+      <Filter>Objects\LocalObjects\nativecall</Filter>
+    </ClInclude>
+    <ClInclude Include="nParameter.h">
+      <Filter>Objects\LocalObjects\nativecall</Filter>
+    </ClInclude>
+    <ClInclude Include="nTemplate.h">
+      <Filter>Objects\LocalObjects\nativecall</Filter>
+    </ClInclude>
+    <ClInclude Include="ContentCache.h">
+      <Filter>Objects\RemoteObjects\general</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoteProcessing.h">
+      <Filter>Objects\RemoteObjects\general</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoteScriptDomain.h">
+      <Filter>Objects\RemoteObjects\general</Filter>
+    </ClInclude>
+    <ClInclude Include="Script.h">
+      <Filter>Objects\RemoteObjects\general</Filter>
+    </ClInclude>
+    <ClInclude Include="GenericThread.h">
+      <Filter>Objects\RemoteObjects\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="NetThread.h">
+      <Filter>Objects\RemoteObjects\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptThread.h">
+      <Filter>Objects\RemoteObjects\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D_Device.h">
+      <Filter>Objects\Direct3D</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D_enums.h">
+      <Filter>Objects\Direct3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>Objects\Direct3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics.h">
+      <Filter>Objects\Direct3D</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageInformation.h">
+      <Filter>Objects\Direct3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Objects\Direct3D</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexFormats.h">
+      <Filter>Objects\Direct3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewport.h">
+      <Filter>Objects\Direct3D</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryStream.h">
+      <Filter>Objects\LocalObjects\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScriptHook\Game.h">
+      <Filter>ScriptHookHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScriptHook\GameTypes.h">
+      <Filter>ScriptHookHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScriptHook\Log.h">
+      <Filter>ScriptHookHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScriptHook\NativeContext.h">
+      <Filter>ScriptHookHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScriptHook\NativeFiberThread.h">
+      <Filter>ScriptHookHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScriptHook\NativeInvoke.h">
+      <Filter>ScriptHookHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScriptHook\NativeThread.h">
+      <Filter>ScriptHookHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScriptHook\ScriptHookManager.h">
+      <Filter>ScriptHookHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScriptHook\Scripting.h">
+      <Filter>ScriptHookHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScriptHook\ScriptingDirty.h">
+      <Filter>ScriptHookHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScriptHook\ScriptingEnums.h">
+      <Filter>ScriptHookHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScriptHook\ScriptingHelpers.h">
+      <Filter>ScriptHookHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScriptHook\ScriptingTypes.h">
+      <Filter>ScriptHookHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScriptHook\Service.h">
+      <Filter>ScriptHookHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScriptHook\Types.h">
+      <Filter>ScriptHookHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScriptHook\Version.h">
+      <Filter>ScriptHookHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScriptHook\Services\Config.h">
+      <Filter>ScriptHookHeaders\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScriptHook\Services\D3DHook.h">
+      <Filter>ScriptHookHeaders\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScriptHook\Services\KeyboardHook.h">
+      <Filter>ScriptHookHeaders\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScriptHook\Services\Menu.h">
+      <Filter>ScriptHookHeaders\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="vDynamicMetadata.h">
+      <Filter>Objects\ScriptingObjects\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Objects\_includes</Filter>
+    </ClInclude>
+    <ClInclude Include="include_defines.h">
+      <Filter>Objects\_includes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\ScriptHookDotNet.readme.txt" />
+  </ItemGroup>
+</Project>

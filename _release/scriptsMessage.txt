@@ -1,0 +1,8 @@
+Put scripts for the GTA IV .Net Script Hook into the "scripts" subfolder of your GTAIV installation. It should be the folder containing this file. DO NOT put code into this file here, it won't run.
+
+The following filetypes are supported:
+
+ *.vb       - for plain VisualBasic.Net scripts
+ *.cs       - for plain C# scripts
+ *.net      - for compiled scripts in any .Net language
+ *.net.dll  - for compiled scripts in any .Net language

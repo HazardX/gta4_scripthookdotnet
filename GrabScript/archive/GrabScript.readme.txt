@@ -1,0 +1,103 @@
+GTAIV GrabScript v1.4
+(C) 2009 Hazard (hazard_x@gmx.net)
+
+
+1. Description
+--------------
+
+Finally it's here! The ultimate GrabScript! Attach yourself to cars
+and helicopters of other players and NPCs and watch yourself being
+thrown around during the wild ride.
+
+
+2. Disclaimer
+-------------
+
+This software is provided 'as-is', without any explicit or implied
+warranty. The author(s) cannot be held accountable for any damage
+that might be caused by this software or any of it's components.
+
+
+3. Requirements
+---------------
+
+Required to run this plugin are:
+
+ - GTA IV patched to version 1.0.1.0 up to 1.0.6.0 or EFLC 1.1.1.0
+ - The GTA IV .Net ScriptHook v1.6.1.1
+
+
+Download the GTA IV .Net ScriptHook here:
+http://www.gtaforums.com/index.php?showtopic=392325
+
+
+4. Installation
+---------------
+
+Extract the complete archive into your GTAIV installation folder.
+Make sure that the GrabScript.net file is extracted correctly to
+the "scripts" subfolder.
+You may configure the grab key in the GrabScript.ini file.
+
+
+5. Deinstallation
+-----------------
+
+Just delete all GrabScript.* files in the "scripts" subfolder of
+your GTA IV installation.
+
+
+6. Changelog
+------------
+
+Version 1.4:
+- Updated to the .Net ScriptHook v1.6.1.1
+
+Version 1.3:
+- Updated to the .Net ScriptHook v0.892
+- More cars can be grabbed now
+- Grabbing while running works correctly now
+- Included the EveryoneGrabMeScript: Press B while driving and all People around you will grab your car. Alt+B will make them let go again.
+
+Version 1.2:
+- Updated to the .Net ScriptHook v0.880 (thus it supports game versions 1.0.3.0 and 1.0.4.0 now)
+- You can now grab again on a car that you grabbed earlier already
+- Grabbing helicopters works reliable now
+
+Version 1.1:
+- Updated to the .Net ScriptHook v0.860
+- Fixed a bug that occured when you pressed the grabkey while entering a vehicle (thx to gorgeprofondegta4)
+
+Version 1.0:
+- First public release
+
+
+7. Infos for Webmasters
+-----------------------
+
+Feel free to add this script as a download to your site
+as long as you give proper credit. However, as long as
+it is technically possible, please DON'T upload it to
+other webservers. Best way would be to link to a
+official release thread or at least direct-link my
+download from your page to assure that people always
+get the latest version! 
+
+Official Release Thread:
+http://www.gtaforums.com/index.php?showtopic=397556
+
+Direct-Download:
+http://dl.megamods.de/85
+
+
+11. Facts
+---------
+
+Data Files:
+GrabScript.net
+
+Author:
+Hazard (hazard_x@gmx.net)
+
+Releasedate (yyyy-mm-dd):
+2010-05-02

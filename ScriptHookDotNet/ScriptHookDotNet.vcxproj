@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5DD209AC-1B5F-483A-BCA9-150CAD228C5A}</ProjectGuid>
+    <RootNamespace>ScriptHookDotNet</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <ReferencePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\bin;$(ReferencePath)</ReferencePath>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
+    <ReferencePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\bin;$(ReferencePath)</ReferencePath>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</EmbedManifest>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(WindowsSdkDir)include;$(DXSDK_2008-03)Include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_SHDN;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>%(AdditionalDependencies);$(DXSDK_2008-03)Lib\x86\d3dx9.lib;..\ScriptHook\bin\ScriptHook.lib</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AssemblyDebug>
+      </AssemblyDebug>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>..\bin\_postbuild.bat</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(WindowsSdkDir)include;$(DXSDK_2008-03)Include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_SHDN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <Link>
+      <AdditionalDependencies>%(AdditionalDependencies);$(DXSDK_2008-03)Lib\x86\d3dx9.lib;..\ScriptHook\bin\ScriptHook.lib</AdditionalDependencies>
+      <AdditionalManifestDependencies>%(AdditionalManifestDependencies)</AdditionalManifestDependencies>
+      <UACExecutionLevel>AsInvoker</UACExecutionLevel>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <DelayLoadDLLs>%(DelayLoadDLLs)</DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+      <NoEntryPoint>false</NoEntryPoint>
+      <TargetMachine>MachineX86</TargetMachine>
+      <CLRThreadAttribute>DefaultThreadingAttribute</CLRThreadAttribute>
+    </Link>
+    <PostBuildEvent>
+      <Command>..\bin\_postbuild.bat</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Design">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Blip.cpp" />
+    <ClCompile Include="bObject.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Checkpoint.cpp" />
+    <ClCompile Include="Light.cpp" />
+    <ClCompile Include="MemoryStream.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Ped.cpp" />
+    <ClCompile Include="Pickup.cpp" />
+    <ClCompile Include="ScriptedFire.cpp" />
+    <ClCompile Include="vDynamicMetadata.cpp" />
+    <ClCompile Include="Vehicle.cpp" />
+    <ClCompile Include="bHandleObject.cpp" />
+    <ClCompile Include="bMouse.cpp" />
+    <ClCompile Include="bScriptChild.cpp" />
+    <ClCompile Include="PedCollection.cpp" />
+    <ClCompile Include="SettingsFile.cpp" />
+    <ClCompile Include="SkinTemplate.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="vEuphoria.cpp" />
+    <ClCompile Include="vGlobals.cpp" />
+    <ClCompile Include="vHelper.cpp" />
+    <ClCompile Include="vPedAnimation.cpp" />
+    <ClCompile Include="vPedComponent.cpp" />
+    <ClCompile Include="vPedSkin.cpp" />
+    <ClCompile Include="vResources.cpp" />
+    <ClCompile Include="vTasks.cpp" />
+    <ClCompile Include="vVehicleDoor.cpp" />
+    <ClCompile Include="vVehicleExtra.cpp" />
+    <ClCompile Include="vWeapon.cpp" />
+    <ClCompile Include="vWeaponCollection.cpp" />
+    <ClCompile Include="AnimationSet.cpp" />
+    <ClCompile Include="DecisionMaker.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Garage.cpp" />
+    <ClCompile Include="Group.cpp" />
+    <ClCompile Include="mHost.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="TaskSequence.cpp" />
+    <ClCompile Include="Team.cpp" />
+    <ClCompile Include="World.cpp" />
+    <ClCompile Include="NmMessage.cpp" />
+    <ClCompile Include="sColorIndex.cpp" />
+    <ClCompile Include="sMatrix.cpp" />
+    <ClCompile Include="sModel.cpp" />
+    <ClCompile Include="sQuaternion.cpp" />
+    <ClCompile Include="sRoom.cpp" />
+    <ClCompile Include="sVector2.cpp" />
+    <ClCompile Include="sVector3.cpp" />
+    <ClCompile Include="sVector4.cpp" />
+    <ClCompile Include="fButton.cpp" />
+    <ClCompile Include="fCheckbox.cpp" />
+    <ClCompile Include="fColorDialog.cpp" />
+    <ClCompile Include="fConfigForm.cpp" />
+    <ClCompile Include="fControl.cpp" />
+    <ClCompile Include="fForm.cpp" />
+    <ClCompile Include="fFormHost.cpp" />
+    <ClCompile Include="fImagebox.cpp" />
+    <ClCompile Include="fKeybox.cpp" />
+    <ClCompile Include="fLabel.cpp" />
+    <ClCompile Include="fListbox.cpp" />
+    <ClCompile Include="fMouse.cpp" />
+    <ClCompile Include="fScrollbar.cpp" />
+    <ClCompile Include="fTextbox.cpp" />
+    <ClCompile Include="KeyWatchDog.cpp" />
+    <ClCompile Include="dColorConverter.cpp" />
+    <ClCompile Include="dControlDesigner.cpp" />
+    <ClCompile Include="dFormRootDesigner.cpp" />
+    <ClCompile Include="StartupThreadC.cpp" />
+    <ClCompile Include="cppHook.cpp" />
+    <ClCompile Include="EventArgs.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MemoryAccess.cpp" />
+    <ClCompile Include="Console.cpp" />
+    <ClCompile Include="ConsoleCommands.cpp" />
+    <ClCompile Include="NetHook.cpp" />
+    <ClCompile Include="ScriptDomain.cpp" />
+    <ClCompile Include="NativeContext2.cpp" />
+    <ClCompile Include="NativeContext3.cpp" />
+    <ClCompile Include="nFunction.cpp" />
+    <ClCompile Include="nParameter.cpp" />
+    <ClCompile Include="nTemplate.cpp" />
+    <ClCompile Include="ContentCache.cpp" />
+    <ClCompile Include="RemoteProcessing.cpp" />
+    <ClCompile Include="RemoteScriptDomain.cpp" />
+    <ClCompile Include="Script.cpp" />
+    <ClCompile Include="GenericThread.cpp" />
+    <ClCompile Include="NetThread.cpp" />
+    <ClCompile Include="ScriptThread.cpp" />
+    <ClCompile Include="D3D_Device.cpp" />
+    <ClCompile Include="Font.cpp" />
+    <ClCompile Include="Graphics.cpp" />
+    <ClCompile Include="ImageInformation.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="Viewport.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\ScriptHook\Game.h" />
+    <ClInclude Include="..\ScriptHook\GameTypes.h" />
+    <ClInclude Include="..\ScriptHook\Log.h" />
+    <ClInclude Include="..\ScriptHook\NativeContext.h" />
+    <ClInclude Include="..\ScriptHook\NativeFiberThread.h" />
+    <ClInclude Include="..\ScriptHook\NativeInvoke.h" />
+    <ClInclude Include="..\ScriptHook\NativeThread.h" />
+    <ClInclude Include="..\ScriptHook\ScriptHookManager.h" />
+    <ClInclude Include="..\ScriptHook\Scripting.h" />
+    <ClInclude Include="..\ScriptHook\ScriptingDirty.h" />
+    <ClInclude Include="..\ScriptHook\ScriptingEnums.h" />
+    <ClInclude Include="..\ScriptHook\ScriptingHelpers.h" />
+    <ClInclude Include="..\ScriptHook\ScriptingTypes.h" />
+    <ClInclude Include="..\ScriptHook\Service.h" />
+    <ClInclude Include="..\ScriptHook\Services\Config.h" />
+    <ClInclude Include="..\ScriptHook\Services\D3DHook.h" />
+    <ClInclude Include="..\ScriptHook\Services\KeyboardHook.h" />
+    <ClInclude Include="..\ScriptHook\Services\Menu.h" />
+    <ClInclude Include="..\ScriptHook\Types.h" />
+    <ClInclude Include="..\ScriptHook\Version.h" />
+    <ClInclude Include="Blip.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Checkpoint.h" />
+    <ClInclude Include="Light.h" />
+    <ClInclude Include="MemoryStream.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="Ped.h" />
+    <ClInclude Include="Pickup.h" />
+    <ClInclude Include="ScriptedFire.h" />
+    <ClInclude Include="vDynamicMetadata.h" />
+    <ClInclude Include="Vehicle.h" />
+    <ClInclude Include="bCollection.h" />
+    <ClInclude Include="bConsole.h" />
+    <ClInclude Include="bHandleObject.h" />
+    <ClInclude Include="bMouse.h" />
+    <ClInclude Include="bObject.h" />
+    <ClInclude Include="bScriptChild.h" />
+    <ClInclude Include="interfaces.h" />
+    <ClInclude Include="PedCollection.h" />
+    <ClInclude Include="SettingsFile.h" />
+    <ClInclude Include="SkinTemplate.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="vEuphoria.h" />
+    <ClInclude Include="vGlobals.h" />
+    <ClInclude Include="vHelper.h" />
+    <ClInclude Include="vPedAnimation.h" />
+    <ClInclude Include="vPedComponent.h" />
+    <ClInclude Include="vPedSkin.h" />
+    <ClInclude Include="vResources.h" />
+    <ClInclude Include="vTasks.h" />
+    <ClInclude Include="vVehicleDoor.h" />
+    <ClInclude Include="vVehicleExtra.h" />
+    <ClInclude Include="vWeapon.h" />
+    <ClInclude Include="vWeaponCollection.h" />
+    <ClInclude Include="AnimationSet.h" />
+    <ClInclude Include="DecisionMaker.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Garage.h" />
+    <ClInclude Include="Group.h" />
+    <ClInclude Include="mHost.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="TaskSequence.h" />
+    <ClInclude Include="Team.h" />
+    <ClInclude Include="World.h" />
+    <ClInclude Include="NmArmsWindmillHelper.h" />
+    <ClInclude Include="NmBeingShotHelper.h" />
+    <ClInclude Include="NmBodyBalanceHelper.h" />
+    <ClInclude Include="NmCommands.h" />
+    <ClInclude Include="NmCustom.h" />
+    <ClInclude Include="NmEnums.h" />
+    <ClInclude Include="NmGrabHelper.h" />
+    <ClInclude Include="NmLeanToPositionHelper.h" />
+    <ClInclude Include="NmLeanTowardsObjectHelper.h" />
+    <ClInclude Include="NmMessage.h" />
+    <ClInclude Include="NmPedalLegsHelper.h" />
+    <ClInclude Include="sColorIndex.h" />
+    <ClInclude Include="sFoundScript.h" />
+    <ClInclude Include="sMatrix.h" />
+    <ClInclude Include="sModel.h" />
+    <ClInclude Include="sQuaternion.h" />
+    <ClInclude Include="sRoom.h" />
+    <ClInclude Include="sVector2.h" />
+    <ClInclude Include="sVector3.h" />
+    <ClInclude Include="sVector4.h" />
+    <ClInclude Include="fButton.h" />
+    <ClInclude Include="fCheckbox.h" />
+    <ClInclude Include="fColorDialog.h" />
+    <ClInclude Include="fConfigForm.h" />
+    <ClInclude Include="fControl.h" />
+    <ClInclude Include="fForm.h" />
+    <ClInclude Include="fFormHost.h" />
+    <ClInclude Include="fImagebox.h" />
+    <ClInclude Include="fKeybox.h" />
+    <ClInclude Include="fLabel.h" />
+    <ClInclude Include="fListbox.h" />
+    <ClInclude Include="fMouse.h" />
+    <ClInclude Include="fScrollbar.h" />
+    <ClInclude Include="fTextbox.h" />
+    <ClInclude Include="KeyboardLayout.h" />
+    <ClInclude Include="KeyWatchDog.h" />
+    <ClInclude Include="dColorConverter.h" />
+    <ClInclude Include="dControlDesigner.h" />
+    <ClInclude Include="dEventArgs.h" />
+    <ClInclude Include="dFormRootDesigner.h" />
+    <ClInclude Include="StartupThreadC.h" />
+    <ClInclude Include="cppHook.h" />
+    <ClInclude Include="enums.h" />
+    <ClInclude Include="EventArgs.h" />
+    <ClInclude Include="include_defines.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="MemoryAccess.h" />
+    <ClInclude Include="NativeHashes.h" />
+    <ClInclude Include="nScripting.h" />
+    <ClInclude Include="nScriptingOrig.h" />
+    <ClInclude Include="Scripting.h" />
+    <ClInclude Include="ScriptingDirty.h" />
+    <ClInclude Include="ScriptingOrig.h" />
+    <ClInclude Include="Console.h" />
+    <ClInclude Include="ConsoleCommands.h" />
+    <ClInclude Include="NetHook.h" />
+    <ClInclude Include="ScriptDomain.h" />
+    <ClInclude Include="NativeContext2.h" />
+    <ClInclude Include="NativeContext3.h" />
+    <ClInclude Include="nFunction.h" />
+    <ClInclude Include="nParameter.h" />
+    <ClInclude Include="nTemplate.h" />
+    <ClInclude Include="ContentCache.h" />
+    <ClInclude Include="RemoteProcessing.h" />
+    <ClInclude Include="RemoteScriptDomain.h" />
+    <ClInclude Include="Script.h" />
+    <ClInclude Include="GenericThread.h" />
+    <ClInclude Include="NetThread.h" />
+    <ClInclude Include="ScriptThread.h" />
+    <ClInclude Include="D3D_Device.h" />
+    <ClInclude Include="D3D_enums.h" />
+    <ClInclude Include="Font.h" />
+    <ClInclude Include="Graphics.h" />
+    <ClInclude Include="ImageInformation.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="VertexFormats.h" />
+    <ClInclude Include="Viewport.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\ScriptHookDotNet.readme.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,1 @@
+REM copy TestScriptVB.net.dll "%ProgramFiles%\Rockstar Games\Grand Theft Auto IV\scripts\TestScriptVB.net"

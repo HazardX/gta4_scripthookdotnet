@@ -1,0 +1,390 @@
+GTAIV .Net Script Hook v1.7.1.7 BETA
+(C) 2009 Hazard (hazard_x@gmx.net / twitter.com/HazardX)
+
+based on the GTAIV C++ Script Hook from Aru <oneforaru at gmail dot com>
+
+Classes Vector2, Vector3, Vector4, Quaternion and Matrix based on
+sourcecode from SlimDX ( www.slimdx.org )
+
+
+1. Description
+--------------
+
+This ASI plugin allows you to run ingame GTAIV scripts written
+in any .Net language. Those languages are easy to learn and use,
+while they are still extremely powerful.
+One noteable aspect of this hook is, that the scripting functions
+are organized in a .Net-typical class structure, which makes
+finding functions intuitive and easy.
+And since you are able to develop scripts with Visual Studio,
+you'll get all benefits like code highlighting and IntelliSense.
+
+You need an AsiLoader to use this plugin in GTAIV. See the
+Requirements section below for more info.
+
+Special thanks to Aru for his help and for his C++ Script Hook.
+This plugin wouldn't be possible without it.
+
+You can get Aru's C++ Script Hook here:
+http://www.gtaforums.com/index.php?showtopic=390582
+
+
+2. Disclaimer
+-------------
+
+This software is provided 'as-is', without any explicit or implied
+warranty. The author(s) cannot be held accountable for any damage
+that might be caused by this software or any of it's components.
+
+
+3. Requirements
+---------------
+
+Required to run this plugin are:
+
+ - A valid installation of GTA IV or EFLC patched to any of the following versions:
+	GTA IV: version 1.0.1.0 up to version 1.0.7.0
+	EFLC:   version 1.1.1.0 up to version 1.1.2.0
+
+ - Microsoft .Net Framework 4 installed on your machine
+ - Any AsiLoader installed for GTA IV
+
+
+I've included download links below. If the application crashes or
+behaves in an unwanted manner then download and install those
+updates/tools.
+
+The .Net Framework SHOULD be installed already after the GTA IV
+installation.
+
+
+.Net Framework 4 Download:
+http://www.microsoft.com/downloads/details.aspx?FamilyID=0a391abd-25c1-4fc0-919f-b21f31ab88b7
+
+
+YAASIL - Yet Another Asi Loader:
+http://www.gtaforums.com/index.php?showtopic=394806
+
+Alexander Blade's AsiLoader:
+http://www.gtaforums.com/index.php?showtopic=380830
+
+listener's XLiveLess, including an AsiLoader:
+http://www.gtaforums.com/index.php?showtopic=388658
+
+
+4. Installation
+---------------
+
+ - EASY: 
+
+Extract the complete archive into your GTAIV installation folder.
+
+
+ - DETAILED:
+
+Extract the complete archive into your GTAIV installation folder.
+Make sure that the ScriptHookDotNet.asi and ScriptHook.dll files
+are in your main GTAIV folder, or any other folder that is
+supported by your AsiLoader.
+
+There may already be a ScriptHook.dll present. This is fine,
+because many mods use this file. In this case, check which
+one of the two files is newer and keep that.
+
+Only the ScriptHookDotNet.asi and ScriptHook.dll files are
+required to run scripts.
+
+All files in the "scripts\for Developers" subfolder are only 
+required if you want to write own scripts. Look at the "Writing
+new scripts" section for more infos on this.
+
+
+5. Script Installation
+----------------------
+
+Scripts for the DotNet Script Hook have to be copied to the
+"scripts" subfolder of your GTAIV installation directory.
+You may have to create the folder if it is not there.
+
+DotNet scripts may have one of the following file formats:
+ *.vb       - for plain VisualBasic.Net scripts
+ *.cs       - for plain C# scripts
+ *.net      - for compiled scripts in any .Net language
+ *.net.dll  - for compiled scripts in any .Net language
+
+
+6. Writing new scripts
+----------------------
+
+Look at the "scripts\for Developers" folder you extracted to
+your GTA IV folder earlier. It contains example projects
+to start with. You could just edit the vb or cs script files
+with Notepad and copy the resulting script to the "scripts"
+subfolder of your GTAIV directory.
+
+However, coding will be MUCH more comfortable and easy if you
+use Visual Studio 2010 to edit your scripts. Look below for a
+free download. Open the SLN Project files with Visual Studio to
+get ready-to-compile script examples. Use those examples as a
+base for your own scripts.
+If you want to create a completely new VS project, make sure
+that you add a reference to the included ScriptHookDotNet.dll.
+This file is ONLY required for coding. On runtime, your
+scripts will automatically use the ScriptHookDotNet.asi that
+is located in your GTAIV directory. Thus you don't need to
+bundle your script with one of those files when you want to
+release it. If you don't want to release the plain  vb or cs
+script files, you can use the compiled DLL. You just have to
+make sure that the file ends to ".net.dll" or just ".net"!
+
+If a script does not run, take a look at the logfile
+ScriptHookDotNet.log . It will write down all errors that
+occur during compiling or runtime.
+
+Do NOT include ScriptHookDotNet.asi or ScriptHookDotNet.dll
+in the release of your script! Link to this thread instead!
+
+Free Visual Studio Express 2010 downloads (registration is free too):
+http://www.microsoft.com/express/Windows/
+
+
+7. Deinstallation
+-----------------
+
+Just delete the ScriptHookDotNet.asi from your GTAIV folder.
+
+Scripts contained in the "scripts" subfolder can remain there
+if you wish to keep them. They wont run or interfere with the
+game when ScriptHookDotNet.asi is deleted.
+
+
+8. Changelog
+------------
+
+Version 1.7.1.7 BETA:
+- Fixed Blip.Delete always causing an exception.
+- Some more NonExistingObjectException checks.
+- Added Vehicle.LightsOn property to determine whether the front lights are turned on. (by LMS)
+- Changed Vehicle.FixTire to also restore the correct tire model. (by LMS)
+
+Version 1.7.1.6 BETA:
+- Stability improvements and additional NonExistingObjectException checks.
+- Added "Flip" command to the console to bring a flipped car on its wheels again.
+
+Version 1.7.1.5 BETA:
+- Accessing a member function of an object that doesn't exist in-game anymore will now throw a NonExistingObjectException that can easily be caught in a Try-Block.
+- Added InteriorLightOn, CanTiresBurst, IsTireBurst, BurstTire, FixTire methods to the Vehicle class.
+
+Version 1.7.1.4 BETA:
+- Added support for GTA IV version 1.0.7.0 and EFLC version 1.1.2.0
+- Added Game.CurrentEpisode property
+- Added TLAD and TBOGT weapon names to the Weapon enumeration.
+
+Version 1.6.1.3 BETA:
+- Fixed a bug where the RelationshipGroup of Peds returned the wrong value. 
+- Fixed many potential crash issues.
+- Added better way of handling metadata via the cool new dynamic objects introduced in .Net 4 .
+    old usage: object.SetMetadata(Of Integer)("MyValueName", False, newvalue)
+    new usage: object.Metadata.MyValueName = newvalue
+- The changes are non-breaking! The old way of handling metadata still works, but is marked as "deprecated".
+
+Version 1.6.1.2 BETA:
+- Fixed a problem that prevented uncompiled .cs scripts from being loaded.
+- Includes the "for Developers\bin" folder again, containing the ScriptHookDotNet.dll
+- Reference the above DLL in VS2010 script projects to get IntelliSense comments.
+
+Version 1.6.1.1 BETA:
+- MANY THANKS to LMS (zumkumzum@googlemail.com), who helped me to solve the crashing problems i was unable to fix on my own!
+- Added support for GTA IV version 1.0.6.0 and EFLC version 1.1.1.0
+- Using .Net Framework 4 now (make sure to install it and also recompile your scripts for .Net 4, too!)
+- Changed versioning. Format: 1.(max supported game patch).(major release).(revision)
+- Changed the handling of Components in Ped.Skin/Player.Skin
+- Blip.Display is an enumeration now
+- Native.Function.Call accepts Camera objects as parameter now
+- Warning: Phone dial events still do not work on Windows 7!
+
+Version 0.893 BETA:
+- Fixed the Vehicle.Rotation property
+- Fixed mixed-up parameter names in some SettingsFile.SetValue overloads
+- Fixed some potential SettingsFile problems in other windows language versions (hopefully).
+- The graphcis scaling will be resetted to Pixel now before a Form gets drawn
+- Errors will always be logged in english now. 
+- Added some descriptions to methods and properties that aren't self-explanatory
+- Added boolean overloads for SettingsFile.GetValue and Setvalue
+- Renamed the Vehicle.Color properties to Color, SpecularColor, FeatureColor1 and FeatureColor2 for convenience
+- AccessViolationExceptions correctly terminate the causing script now.
+- Scripts with a filename in format "myscript.net.dll" also use the default settings file "myscript.ini" now.
+- Fixed a problem where Exists() still returned true for invalid vehicles
+
+Version 0.892 BETA:
+- Added Texture class and Graphics.DrawSprite methods
+- Added TextureDrawingExample which draws a simple RPM gauge next to the radar while driving
+- Added GTA.Forms.Imagebox control
+- Improved drawing performance of windows generated with GTA.Forms
+- Integrated Vector2, Vector3, Vector4, Quaternion and Matrix classes from SlimDX ( www.slimdx.org ) for advanced vector operations
+- Fixed ApplyForce to take world vectors and added ApplyRelativeForce for object vectors
+- Added Model.GetDimensions functions to retrieve the size of a model
+- The player keeps weapons, armor, health and wanted level on a model change now
+- Revamped the Timer class to be more convenient
+- Several Font properties can now only be assigned on Font creation. This prevents a potential memory leak.
+- A bunch of new functions in several classes (thanks CoMPMStR and Intosia)
+- Yet again some breaking changes. Check your scripts!
+
+Version 0.891 BETA:
+- Fixed a problem that resulted in keystrokes not being catched by other mods
+- Fixed a bug that drew some text messages at the wrong position when using ScreenUnits scaling.
+
+Version 0.890 BETA:
+- Using the same DirectX version as GTA4 now. No need to update it anymore. (thanks to bean_xp for the hint)
+- Fixed a problem with errors complaining about the missing method WaitHandle.WaitOne(Int32)
+- Fixed a major bug that resulted in a new object being generated every time you retrieve a ped,
+    vehicle or object, even when you retrieved the same thing earlier. This broke MANY things!
+
+Version 0.880 BETA:
+- Added support for game versions 1.0.3.0 and 1.0.4.0
+- All drawing is done via Direct3D now (thanks to aru for the integrated Direct3D hook)
+- due to the switch to Direct3D many of the Graphics methods have changed a little bit
+- GTA.Timer has an Interval and a Tick event now. Tick will fire at each Interval when Interval is > 0.
+- Abandoned Blips and Cameras will be disabled and deleted on "ReloadScripts" now.
+- Fixed a problem that prevented local metadata from being accessed inside PerFrameDrawing
+- Fixed a problem that prevented to get the position of a blip (including the waypoint)
+- Added "Teleport WP" console command, which teleports you directly to your current waypoint.
+- Added new GTA.Forms namespace for window and control drawing along with mouse input.
+- Added Button, Checkbox, ColorDialog, Keybox, Label, Listbox, Scrollbar and Textbox controls.
+- Added Light and Checkpoint classes to make them easier to use (DrawLight and DrawCheckpoint methods have been removed)
+- Added ability to save setting files (and renamed them from GTA.value.ScriptSettings to GTA.SettingsFile)
+- Added DriveTo tasks that do not require a specific car (will use the current car or steal one)
+- Added most Pickup functionality
+- Added Garage functionality
+- Added methods to retrieve ALL peds, vehicles and objects currently loaded in game memory.
+- Added method to get the Ped you currently aim at.
+- Added methods to iterate through all active objects with a specific model
+- Added SkinTemplate class and Ped.Skin allows you to edit components and props now.
+- Added a WindowExample script to show off some of the new GTA.Forms functionality
+
+Version 0.860 BETA:
+- removed Startup from scripts. You can now use all functions and also Wait() inside the constructor.
+- Replaced all events that required a method override with actual events, conformant with the .Net standard.
+- Updated the examples accordingly. Look at them to see how to apply the changes to your scripts.
+- The PhoneNumberDialed event is now also available in game version 1.0.1.0
+- some other minor changes
+
+Version 0.850 BETA:
+- fixed serveral bugs in the new threading architecture
+- fixed all reported AccessViolations
+- fixed custom cameras. they work now as intended.
+- added ScriptCommands to allow communication between scripts (see the included ScriptCommunication example)
+- added easy settings (ini) file support (just access "Settings" in your scripts)
+- added methods to store Metadata for Objects. Metadata can be stored/read as long as the object exists.
+- added ability to catch dialed phone numbers in scripts (PhoneNumberDialed & BindPhoneNumber)
+- added "ScriptHelp" console command, which displays general info and bound console commands of scripts.
+- added more functions to the Graphics class.
+- you can scroll in the console now using the PageUp/Down keys (hold Shift to get to start/end immediately)
+- use Shift + NumpadPlus/Minus to grow/shrink the console
+- more stuff, as usual
+
+Version 0.840 BETA:
+- Complete rewrite of the internal scripting and thread structure. Crashes on Game & Script reloading should be gone now!
+- added easy to use Euphoria (NaturalMotion) helpers to the Ped class
+- added BindKey and BindConsoleCommand to Scripts - thanks to diryboy for the idea!
+- added ApplyForce function to Peds, Vehicles and Objects
+- the Font width is now determined based on the screen resulution. Use Font.EnforcedWidth to set a custom width.
+- added "Scaling" to the Font class, which allows you to scale fonts by Pixels, FontSize or ScreenUnits.
+- added Euphoria example (demonstrating Zombie-like movement)
+- added BindKey, BindConsoleCommand and PerFrameDrawing examples
+- even more stuff
+
+Version 0.820 BETA:
+- added an ingame console (tilde key) and some commands for it. type "help" for infos.
+- added ConsoleCommand function to scripts, to allow custom console commands
+- added console command to reload all scripts during the game and another one to minimize the game window.
+- added PerFrameDrawing function to scripts to allow drawing of a simple GUI for scripts
+- added Font class to allow custom font styles in PerFrameDrawing
+- added basic support for NaturalMotion messages (NmMessage class)
+- added simple custom console command example
+- key events will trigger now for ALL keys in ALL scripts now. Don't forget to add key checks to your KeyDown events!!!
+- WatchKey is no longer needed and was removed
+- improved ragdoll commands
+- added more functions for positions, directions, offsets, etc. to several objects
+- lots of other new functions and bugfixes, as always
+
+Version 0.800 BETA:
+- added support for game version 1.0.2.0 (thanks to aru)
+- fixed several crashing problems in the constructor of scripts
+- Improved performance alot (especially when accessing many objects)
+- You can now call Wait() inside Startup() of your script
+- It will now reject to load scripts in ranked Multiplayer. thanks to C06alt for the great idea!
+- Added basic Object and Animation support
+- Added a script example that uses an external configuration file. thanks to CoMPMStR for the idea!
+- Added a script example that'll make you smoke a spliff. ;) thanks to iriedreadlock23 for the infos!
+- Added a script example that syncs ingame time with realtime
+- Improved existing examples
+- some minor renames again
+- Added more functions, tasks and a bit of everything
+
+Version 0.730 BETA:
+- renamed Ped.Tasks to Ped.Task ( sorry, i HAD to do it... it was ugly ^^)
+
+Version 0.720 BETA:
+- Scripts reload now if the game reloads
+- Fixed wrong color values
+- Renamed many functions to make more sense (don't complain, i warned you ;) )
+- more examples (including the more complex AnyTaxiScript)
+- new Classes/Functionality:
+  - Many Tasks and TaskSequences for Peds
+  - Native Function support (Native.Function.Call)
+  - Minimal Camera support
+  - Minimal Blip support
+  - MANY more small things... :)
+
+Version 0.700 BETA:
+- First public beta release
+
+
+9. Known Issues
+---------------
+
+Not all script functions have been tested. Some of them may not
+work as desired or may even lead to crashes.
+
+
+10. Troubleshooting
+-------------------
+
+If you get a "MSVCR100.dll not found" error, install the Microsoft Visual C++ 2010 Redistributable Package (x86):
+http://www.microsoft.com/downloads/details.aspx?FamilyID=a7b7a05e-6de6-4d3a-a423-37bf0912db84
+
+If you get crashes and are using GTA IV version 1.0.4.0 or older, try to install this
+older version of the C++ ScriptHook, which works fine with the current .Net ScriptHook:
+http://aru.mtasa.com/gta4/GTAIVScriptHook_0.4.0_Redist.zip
+
+
+11. Infos for Webmasters
+------------------------
+
+Feel free to add this plugin as a download to your site
+as long as you give proper credit. However, as long as
+it is technically possible, please DON'T upload it to
+other webservers. Best way would be to link to a
+official release thread or at least direct-link my
+download from your page to assure that people always
+get the latest version! 
+
+Official Release Thread:
+http://www.gtaforums.com/index.php?showtopic=392325
+
+Direct-Download:
+http://www.hazardx.com/file/83-gta4_scripthook_dotnet
+
+
+12. Facts
+---------
+
+Data Files:
+ScriptHookDotNet.asi
+
+Author:
+Hazard (hazard_x@gmx.net / twitter.com/HazardX)
+
+Releasedate (yyyy-mm-dd):
+2010-12-23
