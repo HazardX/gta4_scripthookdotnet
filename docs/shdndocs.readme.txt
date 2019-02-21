@@ -1,0 +1,51 @@
+GTA IV .Net Script Hook Documentation
+(C) 2010 Hazard (hazard_x@gmx.net)
+
+
+1. Description
+--------------
+
+This archive contains the class reference documentation for 
+the GTA IV .Net Script Hook. It lits all classes and methods
+available for .Net scripts that use the hook.
+It also contains descriptions and further information on some
+classes or methods, but this is still limited to situations
+where the class-structure is not at all self-explanatory.
+
+
+2. Known Issues
+---------------
+
+- The CHM file cannot be viewed from inside a ZIP archive.
+ Extract it to disk first.
+- Documentation pages for generic classes may sometimes give
+ a "Page not found" error message.
+
+
+3. Infos for Webmasters
+-----------------------
+
+DO NOT upload this file to other webservers!
+
+
+4. Links
+--------
+
+Official Release Thread:
+http://www.gtaforums.com/index.php?showtopic=392325
+
+Direct-Download:
+http://dl.megamods.de/89
+
+
+5. Facts
+--------
+
+Data Files:
+GTA IV ScriptHook.Net Documentation.chm
+
+Author:
+Hazard (hazard_x@gmx.net)
+
+Releasedate (yyyy-mm-dd):
+2010-08-19
